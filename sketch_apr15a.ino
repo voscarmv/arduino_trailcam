@@ -9,12 +9,12 @@ void setup() {
 
 void loop() {
   if(digitalRead(sensorpir) == HIGH && standby == LOW) { 
-    Serial.print("Movement detected\n");
-    standby = HIGH;
+    Serial.print("Movement detected\n"); // Send signal to /dev/tty
+    standby = HIGH; // Stop detecting movement to allow computer to take pictures, upload, etc
     delay(5000);
   } else {
     if(Serial.read() == toggle){
-      standby = LOW;
+      standby = LOW; // Computer will send us toggle byte to continue detecting movement
     }
   }
 }
