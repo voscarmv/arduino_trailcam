@@ -1,16 +1,20 @@
-int sensorpir = 12;
+byte sensorpir = 12;
+byte standby = 0;
+byte toggle = 1;
 
-void setup()
-{
+void setup() {
   pinMode(sensorpir, INPUT); 
   Serial.begin(9600);
 }
 
-void loop()
-{
- if(digitalRead(sensorpir) == HIGH) // This polls the sensor every cycle
-  { 
-   Serial.print("Movement detected\n"); // Send this if the sensor detects movement
-   delay(1000); // Then wait a little while
+void loop() {
+  if(digitalRead(sensorpir) == HIGH && standby == LOW) { 
+    Serial.print("Movement detected\n");
+    standby = HIGH;
+    delay(5000);
+  } else {
+    if(Serial.read() == toggle){
+      standby = LOW;
+    }
   }
 }
