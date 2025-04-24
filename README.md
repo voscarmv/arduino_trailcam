@@ -1,7 +1,7 @@
 # arduino_trailcam
 Combining Arduino Uno with a HC-SR501 motion sensor and a USB webcam in ffmpeg
 
-![circuit](./circuit.jpg)
+![circuit](./circuit.jpeg)
 
 ## Guides
 - https://www.youtube.com/watch?v=QizfU7Fgmyw
