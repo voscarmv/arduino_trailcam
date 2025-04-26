@@ -16,3 +16,8 @@ $ npm install
 $ node signup.sh
 $ ./listener.sh
 ```
+
+## Related repositories
+
+- https://github.com/voscarmv/arduino_trailcam_api
+- https://github.com/voscarmv/arduino_trailcam_api_tester
