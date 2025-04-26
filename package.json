@@ -10,6 +10,8 @@
   "license": "ISC",
   "dependencies": {
     "dotenv": "^16.5.0",
-    "gitignore": "^0.7.0"
+    "form-data": "^4.0.2",
+    "gitignore": "^0.7.0",
+    "node-fetch": "^3.3.2"
   }
 }
